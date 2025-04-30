@@ -1,8 +1,7 @@
-<p align="center">
-  <img src="bentune.png" alt="BenTune Logo" width="500"/>
-</p>
-
-<p align="center">An instruction-tuned LLaMA-3.2B assistant developed at Arizona State University</p>
+<div align="center">
+  <img src="bentune.png" alt="BenTune Logo" width="600" style="margin-bottom: -10px;" />
+  <p style="margin-top: 0;">An instruction-tuned LLaMA-3.2B assistant developed at Arizona State University</p>
+</div>
 
 ---
 
