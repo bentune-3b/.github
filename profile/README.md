@@ -4,6 +4,7 @@
 </div>
 
 ---
+<img src="bentune is all you need.png" alt="Report Cover" width="600" style="margin-bottom: -10px;" />
 
 ## Overview
 
@@ -62,21 +63,20 @@ We tested three key decoding techniques during inference:
 
 Performance varied based on the nature of the prompt. While some reasoning tasks benefited from CoT strategies, others did not show significant improvement. Due to time constraints, we were unable to fully explore these behaviors across all benchmark categories.
 
+
 ---
-## Example Responses
 
-## General Instruction-Following: Greeting Message Comparison
+## Model Response Comparison
 
-**Q1. Write a one-sentence greeting message.**
+You can view all the question responses from **Meta Instruct**, **BenTune v1**, and **BenTune v2** side by side [here](comparison.md). The questions cover different categories like instruction following, reasoning, and factual QA.
 
-| Inference Method              | BenTune v1                                     | BenTune v2                                                  | Meta Instruct Model                                                                                                                                                    |
-|------------------------------|------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **No Inference Optimizations** | Hello                                         | Hi, how are you?                                            | <!–[INST]...Hello, how are you today?...</INST>                                                                                                                        |
-| **CoT Forced**               | Hello, I am a bot. How can I help you?         | Hello.                                                      | <</SYS>> <</STEP> <</MSG>> ... (garbled/system-token-filled output)                                                                                                    |
-| **Dynamic CoT**             | Hello!                                         | Hello!                                                      | We can start by considering the purpose of the greeting message...<br>"Hello, I'm glad you're here and I'm looking forward to chatting with you!"                      |
-| **Self Consistency**        | Hello, how are you doing today?               | Hello                                                       | A14. Parametric tests assume a specific distribution (e.g., normality) for the data, whereas non-parametric tests do not... (unrelated)                                |
-| **Self Consistency + CoT**  | Hello!                                         | Hello, my name is Open Assistant. How may I assist you?     | Please let me know if this meets your requirements or if you'd like me to make any adjustments! (not a greeting; meta response)                                        |
+### Quick Contrast
 
+- **BenTune v1** gave the most natural and solid completions overall. Especially for general-purpose tasks and logic-based prompts, it was often clearer and more direct.
+- **BenTune v2** was safer and more factual, but sometimes a bit too cautious. In a few reasoning cases, it overexplained or lost track of the main question.
+- **Meta Instruct** still leads in a few settings, but BenTune v1 got surprisingly close despite being trained on fewer samples and with lighter compute.
+
+We didn’t get time to deeply test all decoding modes across every prompt, but the differences in tone and style across models were very noticeable. Each has its own strengths depending on the kind of task you're running.
 
 ---
 
