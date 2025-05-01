@@ -4,13 +4,14 @@
 </div>
 
 ---
-<img src="bentune is all you need.png" alt="Report Cover" width="600" style="margin-bottom: -10px;" />
-
 ## Overview
 
 BenTune-3B is a lightweight, fine-tuned version of Meta’s LLaMA-3.2B model, optimized for general-purpose instruction following. Developed entirely on ASU’s SOL cluster, this project aims to explore low-latency inference, modular fine-tuning, and evaluation of open-weight LLMs under academic resource constraints.
 
 The model is capable of answering diverse instruction-based prompts ranging from logical reasoning and factual queries to summarization and coding tasks.
+<div align="center">
+<img src="bentune is all you need.png" alt="Report Cover" width="600" style="margin-bottom: -10px;" />
+</div>
 
 ---
 ## BenTune v1 vs v2
